@@ -6,9 +6,9 @@ app.use(bodyParser.json())
 app.post('/',(req,res)=>{
     var getname=req.body.name
     var getid=req.body.roll
-    res.send(getname+ getid)
+    res.send(getname + getid)
 })
-app.listen(3000,()=>{
+app.listen(process.env.PORT||3000,()=>{
     console.log("working condition at http://localhost:3000/")
 
 }
